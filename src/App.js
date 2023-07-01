@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HeavyComponent from "./components/HeavyComponent";
 
 function App() {
+  const navStyleObj = {
+    backgroundColor: "yellow",
+    marginBottom: "30px",
+  };
+
+  const footerStyleObj = {
+    backgroundColor: "green",
+    marginTop: "30px",
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <nav style={navStyleObj}>네비게이션 바</nav>
+      <HeavyComponent />
+      <footer style={footerStyleObj}>푸터 영역이에요</footer>
+    </>
   );
 }
 
